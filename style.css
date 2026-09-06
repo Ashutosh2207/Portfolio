@@ -173,6 +173,66 @@ border:2px solid #00ffff;
 color:white;
 }
 
+/* RESUME DROPDOWN */
+
+.resume-dropdown{
+position:relative;
+display:inline-block;
+}
+
+.resume-menu{
+display:none;
+position:absolute;
+top:calc(100% + 12px);
+left:0;
+min-width:270px;
+background:rgba(0,0,0,.94);
+border:1px solid #00ffff;
+border-radius:12px;
+overflow:hidden;
+z-index:500;
+box-shadow:0 0 30px rgba(0,255,255,.35);
+}
+
+.resume-dropdown.open .resume-menu{
+display:block;
+animation:dropIn .25s ease;
+}
+
+@keyframes dropIn{
+from{opacity:0;transform:translateY(-8px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.resume-menu a{
+display:block;
+padding:14px 18px;
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+border-bottom:1px solid rgba(0,255,255,.15);
+transition:.25s;
+}
+
+.resume-menu a:last-child{
+border-bottom:none;
+}
+
+.resume-menu a span{
+display:block;
+font-size:11px;
+color:#7f95a8;
+font-weight:400;
+margin-top:2px;
+}
+
+.resume-menu a:hover{
+background:rgba(0,255,255,.12);
+color:#00ffff;
+padding-left:26px;
+}
+
 /* CYBER CARD */
 
 .cyber-card{

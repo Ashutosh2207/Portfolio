@@ -27,3 +27,26 @@ backSpeed:40,
 loop:true
 
 });
+
+// Resume Dropdown
+
+const resumeDropdown = document.getElementById("resumeDropdown");
+const resumeBtn = document.getElementById("resumeBtn");
+
+resumeBtn.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+resumeDropdown.classList.toggle("open");
+
+});
+
+document.addEventListener("click",(e)=>{
+
+if(resumeDropdown && !resumeDropdown.contains(e.target)){
+
+resumeDropdown.classList.remove("open");
+
+}
+
+});
